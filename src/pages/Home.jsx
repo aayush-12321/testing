@@ -80,7 +80,7 @@ export const Home = () => {
                 className="absolute w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,rgba(34,211,238,0.3)_360deg)] mix-blend-screen"
               />
               <div className="absolute inset-1 bg-slate-50 dark:bg-zinc-900 rounded-xl flex items-center justify-center flex-col gap-4 text-zinc-600">
-                <div className="text-4xl font-black tracking-tighter opacity-10 uppercase">&lt;CODE /&gt;</div>
+                <div className="text-4xl font-black text-zinc-600 dark:text-zinc-300 tracking-tighter opacity-10 uppercase">&lt;CODE /&gt;</div>
               </div>
             </div>
           </div>
