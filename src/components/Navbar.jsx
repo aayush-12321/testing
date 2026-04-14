@@ -28,7 +28,7 @@ export const Navbar = () => {
               <span className="text-cyan-600 dark:text-cyan-400">.</span>
             </Link>
           </div>
-          
+
           <div className="flex items-center gap-4">
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-1 relative">
@@ -36,11 +36,10 @@ export const Navbar = () => {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      location.pathname === link.path
-                        ? "text-slate-900 dark:text-white"
-                        : "text-slate-500 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-white"
-                    }`}
+                    className={`relative px-4 py-2 rounded-full text-sm font-medium transition-colors ${location.pathname === link.path
+                      ? "text-slate-900 dark:text-white"
+                      : "text-slate-500 hover:text-slate-900 dark:text-zinc-400 dark:hover:text-white"
+                      }`}
                   >
                     {location.pathname === link.path && (
                       <motion.div
@@ -62,7 +61,7 @@ export const Navbar = () => {
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            
+
             <div className="md:hidden flex items-center">
               <button
                 onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +76,7 @@ export const Navbar = () => {
       </div>
 
       {isOpen && (
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white dark:bg-zinc-900 border-b border-black/5 dark:border-white/10"
@@ -88,11 +87,10 @@ export const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  location.pathname === link.path
-                    ? "bg-slate-100 dark:bg-white/10 text-slate-900 dark:text-white"
-                    : "text-slate-500 dark:text-zinc-400 hover:bg-slate-50 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-white"
-                }`}
+                className={`block px-3 py-2 rounded-md text-base font-medium ${location.pathname === link.path
+                  ? "bg-slate-100 dark:bg-white/10 text-slate-900 dark:text-white"
+                  : "text-slate-500 dark:text-zinc-400 hover:bg-slate-50 dark:hover:bg-zinc-800 hover:text-slate-900 dark:hover:text-white"
+                  }`}
               >
                 {link.name}
               </Link>

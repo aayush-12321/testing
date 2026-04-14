@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { portfolioData } from "../data/portfolioData";
 import { PageTransition } from "../components/PageTransition";
+import { SEO } from "../components/SEO";
 
 
 const LinkedinIcon = (props) => (
@@ -18,6 +19,7 @@ const LinkedinIcon = (props) => (
 export const Contact = () => {
   return (
     <PageTransition>
+      <SEO title="Contact Me" description="Get in touch for opportunities and collaborations." />
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

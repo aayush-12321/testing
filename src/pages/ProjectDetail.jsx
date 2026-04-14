@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink, Code2 } from "lucide-react";
 import { SiGithub } from '@icons-pack/react-simple-icons';
 import { portfolioData } from "../data/portfolioData";
 import { PageTransition } from "../components/PageTransition";
+import { SEO } from "../components/SEO";
 
 export const ProjectDetail = () => {
   const { id } = useParams();
@@ -12,10 +13,26 @@ export const ProjectDetail = () => {
 
   if (!project) {
     return <Navigate to="/projects" replace />;
+    return (
+      <PageTransition>
+        <SEO title="Project Not Found" />
+        <div className="flex flex-col items-center justify-center min-h-[50vh] text-center">
+          <h1 className="text-4xl font-black text-slate-900 dark:text-white mb-4">Project Not Found</h1>
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 text-slate-500 dark:text-zinc-400 hover:text-cyan-400 transition-colors group"
+          >
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+            Back to Projects
+          </Link>
+        </div>
+      </PageTransition>
+    );
   }
 
   return (
     <PageTransition>
+      <SEO title={project.title} description={project.description} keywords={project.tech.join(", ")} />
       <div className="max-w-4xl mx-auto">
         <Link
           to="/projects"
