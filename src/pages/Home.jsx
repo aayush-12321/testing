@@ -21,7 +21,7 @@ export const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-cyan-400 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-cyan-400 text-sm font-medium mb-6"
           >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -30,12 +30,12 @@ export const Home = () => {
             Available for new opportunities
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6 leading-[1.1]">
             Hello, I'm <br />
             <span className="text-gradient">{portfolioData.personalInfo.name}</span>
           </h1>
 
-          <p className="text-xl text-zinc-400 mb-8 max-w-lg leading-relaxed">
+          <p className="text-xl text-slate-500 dark:text-zinc-400 mb-8 max-w-lg leading-relaxed">
             {/* {portfolioData.personalInfo.role} based in {portfolioData.personalInfo.location}. I build modern, scalable, and data-driven applications. */}
             Building modern, scalable, and data-driven applications with full-stack development, data science, machine learning, and AI
           </p>
@@ -45,7 +45,7 @@ export const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto px-8 py-3 bg-white text-zinc-950 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-colors"
+                className="w-full sm:w-auto px-8 py-3 bg-slate-900 text-white dark:bg-white dark:text-zinc-950 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-slate-800 dark:hover:bg-zinc-200 transition-colors"
               >
                 View My Work
                 <ArrowRight size={18} />
@@ -55,7 +55,7 @@ export const Home = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full sm:w-auto px-8 py-3 bg-white/5 text-white border border-white/10 rounded-full font-semibold flex items-center justify-center hover:bg-white/10 transition-colors"
+                className="w-full sm:w-auto px-8 py-3 bg-black/5 dark:bg-white/5 text-slate-900 dark:text-white border border-black/5 dark:border-white/10 rounded-full font-semibold flex items-center justify-center hover:bg-black/5 dark:bg-white/10 transition-colors"
               >
                 Get in Touch
               </motion.button>
@@ -72,14 +72,14 @@ export const Home = () => {
         >
           <div className="relative w-72 h-72 md:w-96 md:h-96">
             <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-indigo-500 rounded-2xl rotate-6 opacity-30 blur-xl animate-pulse"></div>
-            <div className="absolute inset-0 bg-zinc-900 border border-white/10 rounded-2xl -rotate-6 transition-transform hover:rotate-0 duration-500 flex items-center justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-slate-50 dark:bg-zinc-900 border border-black/5 dark:border-white/10 rounded-2xl -rotate-6 transition-transform hover:rotate-0 duration-500 flex items-center justify-center overflow-hidden">
               {/* Generative shapes replacing generic photo */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                 className="absolute w-[200%] h-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,rgba(34,211,238,0.3)_360deg)] mix-blend-screen"
               />
-              <div className="absolute inset-1 bg-zinc-900 rounded-xl flex items-center justify-center flex-col gap-4 text-zinc-600">
+              <div className="absolute inset-1 bg-slate-50 dark:bg-zinc-900 rounded-xl flex items-center justify-center flex-col gap-4 text-zinc-600">
                 <div className="text-4xl font-black tracking-tighter opacity-10 uppercase">&lt;CODE /&gt;</div>
               </div>
             </div>
@@ -91,7 +91,7 @@ export const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-zinc-500 flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-900 dark:text-zinc-500 flex flex-col items-center gap-2"
       >
         <span className="text-xs font-semibold tracking-widest uppercase">Scroll Down</span>
         <motion.div

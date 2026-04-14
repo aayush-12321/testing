@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import { AnimatePresence } from "framer-motion";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // Pages
 import { Home } from "./pages/Home";
@@ -30,16 +31,18 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-zinc-950 text-zinc-50 relative overflow-hidden">
-        {/* Global ambient background noise or grain can go here if needed */}
-        <Navbar />
-        <main className="flex-grow pt-8 pb-16">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 relative overflow-hidden transition-colors duration-300">
+          {/* Global ambient background noise or grain can go here if needed */}
+          <Navbar />
+          <main className="flex-grow pt-8 pb-16">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   );
 }
 
